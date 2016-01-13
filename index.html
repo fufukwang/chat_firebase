@@ -17,18 +17,18 @@
         <div class="cover-container">
 
           <!-- INPUT HERE -->
-          <div class="masthead clearfix">
+          <div class="masthead clearfix comments col-xs-12">
             <div class="inner">
               <h1 class="cover-heading">說話.</h1>
               <div>
-                <input type="text" x-ng-model="newName" >
-                <input type="text" x-ng-model="newComment">
+                <div class="col-md-4"><input type="text" x-ng-model="newName" class="form-control" placeholder="姓名"></div>
+                <div class="col-md-4"><textarea x-ng-model="newComment" class="form-control" placeholder="內容"></textarea></div>
                 <button ng-click="addComment(newComment,newName)" class="btn btn-sm">Go.</button>
               </div>
             </div>
           </div>
 
-          <div class="comments col-md-12">
+          <div class="comments col-xs-12">
 
             <table class="table">
               <tr x-ng-repeat="c in comments">
