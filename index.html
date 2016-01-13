@@ -15,27 +15,14 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-
+<div class="comments col-xs-12">
+  <div x-ng-repeat="c in comments">{{c.comment}} <span class="details">時間 {{c.when}} 發布人 {{c.name}}</span></div>
+</div>
           <!-- INPUT HERE -->
           <div class="masthead clearfix comments col-xs-12">
-            <div class="inner">
-              <h1 class="cover-heading">說話.</h1>
-              <div>
-                <div class="col-md-4"><input type="text" x-ng-model="newName" class="form-control" placeholder="姓名"></div>
-                <div class="col-md-4"><textarea x-ng-model="newComment" class="form-control" placeholder="內容"></textarea></div>
-                <button ng-click="addComment(newComment,newName)" class="btn btn-sm">Go.</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="comments col-xs-12">
-
-            <table class="table">
-              <tr x-ng-repeat="c in comments">
-                <td>{{c.comment}} <span class="details">時間 {{c.when}} 發布人 {{c.name}}</span></td>
-              </tr>
-            </table>
-
+            <div class="col-md-4"><input type="text" x-ng-model="newName" class="form-control" placeholder="姓名"></div>
+            <div class="col-md-4"><textarea x-ng-model="newComment" class="form-control" placeholder="內容"></textarea></div>
+            <button ng-click="addComment(newComment,newName)" class="btn btn-sm">Go.</button>
           </div>
 
 
